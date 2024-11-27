@@ -1,0 +1,36 @@
+﻿
+USE [SuperFlux]
+GO
+/****** Object:  Table [dbo].[commande]    Script Date: 11/03/2021 08:50:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[commande](
+	[reference] [varchar](20) NOT NULL,
+	[libelle] [varchar](2000) NOT NULL,
+	[quantite] [int] NOT NULL,
+ CONSTRAINT [PK_commande] PRIMARY KEY CLUSTERED 
+(
+	[reference] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[produit]    Script Date: 11/03/2021 08:50:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[produit](
+	[Reference] [varchar](20) NOT NULL,
+	[Libelle] [varchar](2000) NOT NULL,
+ CONSTRAINT [PK_produit] PRIMARY KEY CLUSTERED 
+(
+	[Reference] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+USE [master]
+GO
+ALTER DATABASE [SuperFlux] SET  READ_WRITE 
+GO
